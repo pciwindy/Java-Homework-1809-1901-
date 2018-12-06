@@ -7,5 +7,6 @@ public class Example01 {
 		Output output=new Output(st);
 		new Thread(input).start();
 		new Thread(output).start();
+		//Java´úÂë
 	}
 }

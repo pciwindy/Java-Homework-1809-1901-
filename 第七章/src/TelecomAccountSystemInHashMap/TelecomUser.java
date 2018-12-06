@@ -65,7 +65,7 @@ public class TelecomUser {
 	void printDetails() {
 		int flag = 0+(new Random().nextInt(2));
 		if(flag==0) {
-			//先将LinkedList中的数据迭代出来
+			//先将HashMap中的数据迭代出来
 			Iterator itRecorders = this.communicationRecords.iterator();
 			while(itRecorders.hasNext()) {
 				System.out.println("----------通话记录分割线(先取Key集合)----------");
