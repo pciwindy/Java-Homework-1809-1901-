@@ -6,11 +6,11 @@ public class DBUtils {
 	private static DBUtils instance=null;
 	private HashMap<String,User> users=new HashMap<String,User>();
 	
-	private void DBUtils() {
+	private DBUtils() {
 		//Add Users u1
 		User u1=new User();
 		u1.setCall("10001");
-		u1.setUserName("老王");
+		u1.setUserName("灏忔槑");
 		u1.setCardId("1001");
 		u1.setCardPwd("admin");
 		u1.setAccount(10000);
@@ -19,7 +19,7 @@ public class DBUtils {
 		//Add Users u1
 		User u2=new User();
 		u2.setCall("10086");
-		u2.setUserName("小明");
+		u2.setUserName("灏忕帇");
 		u2.setCardId("1002");
 		u2.setCardPwd("admin");
 		u2.setAccount(10000);
@@ -28,7 +28,7 @@ public class DBUtils {
 		//Add Users u1
 		User u3=new User();
 		u3.setCall("10000");
-		u3.setUserName("小红");
+		u3.setUserName("灏忕孩");
 		u3.setCardId("1003");
 		u3.setCardPwd("admin");
 		u3.setAccount(10000);
@@ -53,12 +53,5 @@ public class DBUtils {
 	
 	public HashMap<String,User> getUsers(){
 		return users;
-	}
-	
-	public static void main(String args[]) {
-		DBUtils db=DBUtils.getInstance();
-		System.out.println(db.getUser("1001"));
-		System.out.println(db.getUsers().containsKey("1001"));
-		
 	}
 }

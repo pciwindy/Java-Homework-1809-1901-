@@ -38,32 +38,39 @@ public class Bank {
 	
 	public void operate() {
 		Bank b=new Bank();
-		Scanner in=new Scanner(System.in);
-		System.out.println("Account: "+user.getAccount());
-		account=user.getAccount();
-		int flag=in.nextInt();
-		switch(flag) {
-			case 1:
-			{
-				b.inMoney();
-				break;
-			}
-			case 2:
-			{
-				b.getMoney();
-				break;
-			}
-			case 3:
-			{
-				b.howMuchIHave();
-				break;
-			}
-			default:
-			{
-				System.out.println("Input Error!");
-				break;
+		b.user=user;
+		while(true){
+			Scanner in=new Scanner(System.in);
+			System.out.println("Account: "+user.getAccount());
+			System.out.println("1.in");
+			System.out.println("2.out");
+			System.out.println("3.i have");
+			account=user.getAccount();
+			int flag=in.nextInt();
+			switch(flag) {
+				case 1:
+				{
+					b.inMoney();
+					break;
+				}
+				case 2:
+				{
+					b.getMoney();
+					break;
+				}
+				case 3:
+				{
+					b.howMuchIHave();
+					break;
+				}
+				default:
+				{
+					System.out.println("Input Error!");
+					break;
+				}
 			}
 		}
+		
 	}
 	
 	public void inMoney() {
@@ -73,18 +80,29 @@ public class Bank {
 		account=user.getAccount()+inMoney;
 		user.setAccount(account);
 		System.out.println("Successed! You have "+user.getAccount()+" now!");
+		System.out.println();
 	}
 	
 	public void getMoney() {
 		Scanner in=new Scanner(System.in);
 		System.out.println("How much will you get?");
 		double getMoney=in.nextDouble();
-		account=user.getAccount()-getMoney;
-		user.setAccount(account);
-		System.out.println("Successed! You have "+user.getAccount()+" now!");
+		if(user.getAccount()-getMoney<0){
+			System.out.println("Failed! You don't have too much money!");
+			System.out.println("You have "+user.getAccount());
+			System.out.println();
+		}
+		else{
+			account=user.getAccount()-getMoney;
+			user.setAccount(account);
+			System.out.println("Successed! You have "+user.getAccount()+" now!");
+			System.out.println();
+		}
+		
 	}
 	
 	public void howMuchIHave() {
 		System.out.println("You have "+user.getAccount()+" now!");
+		System.out.println();
 	}
 }
