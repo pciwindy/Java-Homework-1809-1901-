@@ -1,10 +1,12 @@
 package simulationBankSystem;
 
 import java.util.*;
+import java.io.*;
 
 public class DBUtils {
 	private static DBUtils instance=null;
 	private HashMap<String,User> users=new HashMap<String,User>();
+	private FileWriter writer;
 	
 	private DBUtils() {
 		//Add Users u1
@@ -53,5 +55,19 @@ public class DBUtils {
 	
 	public HashMap<String,User> getUsers(){
 		return users;
+	}
+	
+	public void update() throws Exception {
+		Set<String> userSet=users.keySet();
+		writer=new FileWriter("user.dat");
+		BufferedWriter bfw=new BufferedWriter(writer);
+		for(String cardId:userSet) {
+			User u=(User)users.get(cardId);
+			String uString=u.getCardId()+","+u.getCardPwd()+","+u.getUserName()+","+u.getAccount()+"\r\n";
+			bfw.write(uString);
+		}
+		if(bfw!=null) {
+			bfw.close();
+		}
 	}
 }

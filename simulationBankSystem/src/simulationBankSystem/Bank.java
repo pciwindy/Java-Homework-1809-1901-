@@ -6,10 +6,11 @@ public class Bank {
 	private double account;
 	private User user;
 	
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception {
 		Bank bank=new Bank();
 		bank.login();
 		bank.operate();
+		bank.close();
 	}
 	
 	public void login() {
@@ -39,7 +40,8 @@ public class Bank {
 	public void operate() {
 		Bank b=new Bank();
 		b.user=user;
-		while(true){
+		boolean condition=true;
+		while(condition){
 			Scanner in=new Scanner(System.in);
 			System.out.println("Account: "+user.getAccount());
 			System.out.println("1.in");
@@ -66,6 +68,7 @@ public class Bank {
 				default:
 				{
 					System.out.println("Input Error!");
+					condition=false;
 					break;
 				}
 			}
@@ -104,5 +107,10 @@ public class Bank {
 	public void howMuchIHave() {
 		System.out.println("You have "+user.getAccount()+" now!");
 		System.out.println();
+	}
+	
+	private void close() throws Exception {
+		DBUtils db=DBUtils.getInstance();
+		db.update();
 	}
 }
