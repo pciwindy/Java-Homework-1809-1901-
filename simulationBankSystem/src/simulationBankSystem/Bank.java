@@ -13,7 +13,7 @@ public class Bank {
 		bank.close();
 	}
 	
-	public void login() {
+	public void login() throws Exception {
 		DBUtils db=DBUtils.getInstance();
 		Scanner in=new Scanner(System.in);
 		System.out.println("Welcome to Bank System!");
@@ -37,16 +37,18 @@ public class Bank {
 	}
 	
 	
-	public void operate() {
+	public void operate() throws Exception {
 		Bank b=new Bank();
 		b.user=user;
 		boolean condition=true;
 		while(condition){
 			Scanner in=new Scanner(System.in);
 			System.out.println("Account: "+user.getAccount());
-			System.out.println("1.in");
-			System.out.println("2.out");
-			System.out.println("3.i have");
+			System.out.println("1.In");
+			System.out.println("2.Out");
+			System.out.println("3.I have");
+			System.out.println("4.Register");
+			System.out.println("0.Exit");
 			account=user.getAccount();
 			int flag=in.nextInt();
 			switch(flag) {
@@ -65,10 +67,20 @@ public class Bank {
 					b.howMuchIHave();
 					break;
 				}
+				case 4:
+				{
+					b.register();
+					break;
+				}
+				case 0:
+				{
+					System.out.println("Exited!Have a nice day!");
+					condition=false;
+					break;
+				}
 				default:
 				{
 					System.out.println("Input Error!");
-					condition=false;
 					break;
 				}
 			}
@@ -107,6 +119,23 @@ public class Bank {
 	public void howMuchIHave() {
 		System.out.println("You have "+user.getAccount()+" now!");
 		System.out.println();
+	}
+	
+	public void register() throws Exception {
+		User u=new User();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Input your cardId");
+		u.setCardId(scanner.nextLine());
+		System.out.println("Input your UserName");
+		u.setUserName(scanner.nextLine());
+		System.out.println("Input your Password");
+		u.setCardPwd(scanner.nextLine());
+		System.out.println("Input your PhoneNumber");
+		u.setCall(scanner.nextLine());
+		System.out.println("Input money");
+		u.setAccount(scanner.nextDouble());
+		DBUtils dbUtil=DBUtils.getInstance();
+		dbUtil.addUser(u);
 	}
 	
 	private void close() throws Exception {
