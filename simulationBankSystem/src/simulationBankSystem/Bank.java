@@ -48,6 +48,7 @@ public class Bank {
 			System.out.println("2.Out");
 			System.out.println("3.I have");
 			System.out.println("4.Register");
+			System.out.println("5 Save");
 			System.out.println("0.Exit");
 			account=user.getAccount();
 			int flag=in.nextInt();
@@ -70,6 +71,11 @@ public class Bank {
 				case 4:
 				{
 					b.register();
+					break;
+				}
+				case 5:
+				{
+					b.close();
 					break;
 				}
 				case 0:
