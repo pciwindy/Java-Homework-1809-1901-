@@ -1,13 +1,13 @@
-
 # Java Homework(1809-1901)
 ## 2019-01-05
++ 四连警告！更新了README.md的排版(此人有毒！)
 + 三连警告！更新了README.md的排版
 + 二连警告！更新了README.md的排版
 + 图书管理系统
 	+ 图书的增删查、用户的增删改查、持久化存储、面向对象、分层和多态使用
 	+ 项目前前后后大概两个星期，对于我们这个小团队来说，已经很快了
 	+ 再次在此感谢
-	 + zpffly001(https://github.com/zpffly001)
+	 + [GitHub-zpffly001](https://github.com/zpffly001)
 	 + 组内的各位成员
 	 + 辅导我的各位老师
 
@@ -21,7 +21,7 @@
 ## 2018-12-23
 + 学生选课系统
     + 示例代码上传
-    + 来自kevinjoyce，地址为https://github.com/kevinjoyce/JavaCourseWare
+    + 来自[GitHub-kevinjoyce](https://github.com/kevinjoyce/JavaCourseWare)
     
 ## 2018-12-17
 + 银行模拟系统(有IO)
@@ -44,12 +44,12 @@
 + 第一次使用GitHub，将之前的课后习题代码上传到这里
 
 # 感谢
-+ kevinjoyce(https://github.com/kevinjoyce)
-+ zpffly001(https://github.com/zpffly001)
++ [GitHub-kevinjoyce](https://github.com/kevinjoyce)
++ [GitHub-zpffly001](https://github.com/zpffly001)
 + 小组内的各位成员
 + 各位帮助我的人
 
 # 杂项
-+ 使用的IDE：eclipse
-+ Markdown编辑器：https://www.zybuluo.com/mdeditor(还蛮好用)
-+ Java SDK版本：1.8
++ [Markdown编辑器](https://www.zybuluo.com/mdeditor)(还蛮好用)
++ 使用的IDE：[Eclipse Photon](http://www.eclipse.org/)
++ Java SDK版本：JavaSE-1.8
