@@ -2,7 +2,6 @@ package AdminUI;
 
 public class AdminShowUI extends AllUI{
 	void show() {
-		//显示选项界面
 		System.out.println("-----------------------------图书管理系统(管理员)--------------------------------");
 		System.out.println("\t\t1.增加用户                    \t\t2.删除用户");
 		System.out.println("\t\t3.修改用户密码             \t\t4.修改用户信息");

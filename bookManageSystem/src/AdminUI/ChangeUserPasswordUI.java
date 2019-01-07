@@ -6,7 +6,6 @@ import center.AdminCet;
 
 public class ChangeUserPasswordUI extends AllUI{
 	void show() {
-		//管理员模式下修改用户密码
 		AdminCet adminCet = new AdminCet();
 		Scanner scanner = new Scanner(System.in);
 		
@@ -18,7 +17,6 @@ public class ChangeUserPasswordUI extends AllUI{
 		String newPwd = scanner.nextLine();
 		System.out.println("请再次输入新密码");
 		String newPwd2 = scanner.nextLine();
-		//调用方法
 		adminCet.changePwd(username, oldPwd, newPwd, newPwd2);
 	}
 }

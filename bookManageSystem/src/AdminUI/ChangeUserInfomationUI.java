@@ -6,7 +6,6 @@ import center.AdminCet;
 
 public class ChangeUserInfomationUI extends AllUI{
 	void show() {
-		//修改用户信息
 		AdminCet adminCet = new AdminCet();
 		Scanner scanner = new Scanner(System.in);
 		
@@ -20,11 +19,9 @@ public class ChangeUserInfomationUI extends AllUI{
 			System.out.println("1-男 2-女");
 			String flag=scanner.nextLine();
 			if(flag.equals("1")){
-				//通过传入的参数更改
 				adminCet.updateUser(1, un, "M");
 			}
 			else if(flag.equals("2")){
-				//通过传入的参数更改
 				adminCet.updateUser(1, un, "F");
 			}
 			else{
@@ -34,7 +31,6 @@ public class ChangeUserInfomationUI extends AllUI{
 		} else if (studentChoice == 2) {
 			System.out.println("请输入新的手机号：");
 			String Userphp = scanner.nextLine();
-			//通过传入的参数更改
 			adminCet.updateUser(2, un, Userphp);
 			System.out.println("修改成功！");
 		} else {

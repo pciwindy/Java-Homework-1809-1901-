@@ -5,8 +5,6 @@ import java.util.Scanner;
 import ViewUI.LoginUI;
 
 public class SelectUI extends AllUI{
-	//将switch-case语句独立
-	//!用户层没有重构!
 	AdminUI Adu=new AdminUI();
 	void show(){
 		while (true) {
