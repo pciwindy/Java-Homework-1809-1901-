@@ -9,6 +9,8 @@ public class LoginUI {
 	String userPassword;
 	UserCet userCet;
 	AdminCet adminCet;
+	
+	
 	System.out.println("请输入用户名");
 	scanner = new Scanner(System.in);
 	userName=scanner.nextLine();

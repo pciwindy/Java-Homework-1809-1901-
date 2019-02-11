@@ -1,53 +1,50 @@
 package AdminUI;
-
 import java.util.Scanner;
-
 import ViewUI.LoginUI;
 
 public class SelectUI extends AllUI{
-	AdminUI Adu=new AdminUI();
 	void show(){
 		while (true) {
 			AdminShowUI asu=new AdminShowUI();
-			Adu.setUI(asu);
+			AdminUI.setUI(asu);
 			Scanner scanner = new Scanner(System.in);
 			String option = scanner.nextLine();
 			switch (option) {
 			case "1":
 				AddUserUI adu=new AddUserUI();
-				Adu.setUI(adu);
+				AdminUI.setUI(adu);
 				break;
 			case "2":
 				DeleteUserUI deu=new DeleteUserUI();
-				Adu.setUI(deu);
+				AdminUI.setUI(deu);
 				break;
 			case "3":
 				ChangeUserPasswordUI cupd=new ChangeUserPasswordUI();
-				Adu.setUI(cupd);
+				AdminUI.setUI(cupd);
 				break;
 			case "4":
 				ChangeUserInfomationUI cui=new ChangeUserInfomationUI();
-				Adu.setUI(cui);
+				AdminUI.setUI(cui);
 				break;
 			case "5":
 				AddBookUI adb=new AddBookUI();
-				Adu.setUI(adb);
+				AdminUI.setUI(adb);
 				break;
 			case "6":
 				DeleteBookUI dtb=new DeleteBookUI();
-				Adu.setUI(dtb);
+				AdminUI.setUI(dtb);
 				break;
 			case "7":
 				SearchBookUI sbu=new SearchBookUI();
-				Adu.setUI(sbu);
+				AdminUI.setUI(sbu);
 				break;
 			case "8":
 				SearchUserUI suu=new SearchUserUI();
-				Adu.setUI(suu);
+				AdminUI.setUI(suu);
 				break;
 			case "9":
 				ChangeSUPasswordUI csup=new ChangeSUPasswordUI();
-				Adu.setUI(csup);
+				AdminUI.setUI(csup);
 				break;
 			case "10":
 				System.out.println("欢迎您再次使用！");

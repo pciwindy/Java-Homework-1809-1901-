@@ -1,34 +1,29 @@
 package ViewUI;
 import java.util.Scanner;
 
-public class MainUI {
-	static AllUI a;
-	public static void setUI(AllUI b,String userName) {
-		a=b;
-		a.show(userName);
-	}
-	public static void show(String userName) throws InterruptedException {
-		SelectionUI su=new SelectionUI();
+public class SelectUI extends AllUI{
+	void show(String userName) throws InterruptedException {
 		while(true) {
-			setUI(su,userName);
+			SelectionUI su=new SelectionUI();
+			UserUI.setUI(su,userName);
 			Scanner scanner = new Scanner(System.in);
 			String option = scanner.nextLine();
 			switch (option) {
 			case "1":
 				BorrowUI b=new BorrowUI();
-				setUI(b,userName);
+				UserUI.setUI(b,userName);
 				break;
 			case "2":
 				RepayUI r=new RepayUI();
-				setUI(r,userName);
+				UserUI.setUI(r,userName);
 				break;
 			case "3":
 				SearchUI s=new SearchUI();
-				setUI(s,userName);
+				UserUI.setUI(s,userName);
 				break;
 			case "4":
 				ChangePwdUI c=new ChangePwdUI();
-				setUI(c,userName);
+				UserUI.setUI(c,userName);
 				break;
 			case "0":
 				System.out.println("欢迎您再次使用！");
